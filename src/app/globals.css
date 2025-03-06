@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Fonts */
+  --font-baskin-robbins: "BaskinRobbins-Bold", sans-serif;
+  --font-noto-sans-kr: "Noto Sans KR", sans-serif;
+
+  /* Core colors */
+  --color-black: #0f0f0f;
+  --color-black-50: rgba(15, 15, 15, 0.5);
+  --color-white: #ffffff;
+  --color-white-10: rgba(255, 255, 255, 0.1);
+
+  /* Grays */
+  --color-gray-100: #eeeeee;
+  --color-gray-200: #dddddd;
+  --color-gray-300: #a4a4a4;
+  --color-gray-400: #5a5a5a;
+  --color-gray-500: #161616;
+
+  /* Brand colors */
+  --color-main: #efff04;
+  --color-red: #ff483d;
+  --color-blue: #29c9f9;
+  --color-purple: #a77eff;
+  --color-pink: #ff2a6a;
+}
+
+/* 기본 폰트 설정 */
+body {
+  font-family: var(--font-noto-sans-kr);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* 스크롤 스타일 적용 */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.custom-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  /* margin-top : 60px; */
+  scrollbar-color: var(--color-gray-400) transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-400);
+  border-radius: 2px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-gray-300);
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
